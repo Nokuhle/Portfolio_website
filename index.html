@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokuhle Ngubane</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Space Canvas for particles -->
+    <canvas id="space-canvas"></canvas>
+
+    <!-- Shooting Stars -->
+    <div class="shooting-star" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="shooting-star" style="top: 40%; left: 20%; animation-delay: 1.5s;"></div>
+    <div class="shooting-star" style="top: 60%; left: 5%; animation-delay: 3s;"></div>
+    <div class="shooting-star" style="top: 80%; left: 15%; animation-delay: 4.5s;"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#work">My Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="theme-switch" id="themeSwitch">
+                <div class="theme-switch-handle" id="themeHandle"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="profile-container">
+                <div class="planet-container">
+                    <div class="spinning-planet">
+                        <div class="planet-crater crater-1"></div>
+                        <div class="planet-crater crater-2"></div>
+                        <div class="planet-crater crater-3"></div>
+                        <div class="planet-crater crater-4"></div>
+                    </div>
+                    <div class="planet-ring"></div>
+                </div>
+                <h1 class="profile-title fade-in">Nokuhle Ngubane</h1>
+                <p class="tagline fade-in delay-1">Full-stack Developer and UI/UX Designer</p>
+                <div class="typing-text" id="typingText"></div>
+                <div class="skills">
+                    <div class="skill-chip fade-in delay-2"><i class="fas fa-palette"></i> UI/UX Design</div>
+                    <div class="skill-chip fade-in delay-3"><i class="fas fa-mobile"></i> Full-stack Development</div>
+                    <div class="skill-chip fade-in delay-3"><i class="fas fa-server"></i> Node.js</div>
+                    <div class="skill-chip fade-in delay-2"><i class="fas fa-code"></i> React Native + React JS</div>
+                    <div class="skill-chip fade-in delay-2"><i class="fas fa-code"></i> HTML + CSS + Javascript </div>
+                    <div class="skill-chip fade-in delay-2"><i class="fas fa-code"></i> C#</div>
+                    <div class="skill-chip fade-in delay-2"><i class="fas fa-code"></i> C++</div>
+                    <div class="skill-chip fade-in delay-2"><i class="fas fa-code"></i> Python</div>
+                    <div class="skill-chip fade-in delay-2"><i class="fas fa-code"></i> PHP</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary Section -->
+        <section class="summary" id="about">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="summary-content">
+                <div class="fade-in delay-1">
+                    <p>I'm a passionate frontend developer with expertise in creating beautiful, functional digital experiences. With over 5 years in the industry, I specialize in JavaScript-based applications and responsive design.</p>
+                    <p>My approach combines technical excellence with aesthetic design sensibilities, resulting in applications that are both powerful and delightful to use.</p>
+                </div>
+                <div class="fade-in delay-2">
+                    <p>I offer end-to-end development services including:</p>
+                    <ul style="list-style-position: inside; margin-top: 20px;">
+                        <li>Custom Web Application Development</li>
+                        <li>UI/UX Design & Prototyping</li>
+                        <li>Mobile App Development</li>
+                        <li>API Design & Implementation</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <h2 class="section-title fade-in" id="achievements">My Achievements</h2>
+        <div class="achievements">
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="achievement-title">4-Time Hackathon Winner</h3>
+                <p>Won multiple national hackathons with innovative project ideas and flawless execution.</p>
+            </div>
+            <div class="achievement-card fade-in delay-1">
+                <div class="achievement-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="achievement-title">Mentor</h3>
+                <p>Regularly mentor junior developers and conduct coding workshops at local communities.</p>
+            </div>
+            <div class="achievement-card fade-in delay-2">
+                <div class="achievement-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="achievement-title">Top Rated Freelancer</h3>
+                <p>Maintained a 5-star rating across multiple freelance platforms with 100+ completed projects.</p>
+            </div>
+        </div>
+
+        <!-- Doors Section -->
+        <section class="doors-section" id="work">
+            <h2 class="section-title fade-in">Explore My Work</h2>
+            <p class="fade-in">Select a section to view my projects</p>
+            
+            <div class="doors-container">
+                <div class="door fade-in">
+                    <div class="door-inner">
+                        <div class="door-front">
+                            <div class="door-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3 class="door-title">Design Galaxy</h3>
+                            <p class="door-description">UI/UX designs, websites, and mobile app interfaces</p>
+                        </div>
+                        <div class="door-back">
+                            <h3 class="door-title">My Design Process</h3>
+                            <p class="door-description">User research, wireframing, prototyping, and visual design</p>
+                            <p style="margin-top: 30px; font-style: italic;">Click to enter</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="door fade-in delay-1">
+                    <div class="door-inner">
+                        <div class="door-front">
+                            <div class="door-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="door-title">Code Universe</h3>
+                            <p class="door-description">Full-stack applications with live demos and code</p>
+                        </div>
+                        <div class="door-back">
+                            <h3 class="door-title">My Tech Stack</h3>
+                            <p class="door-description">React, Node.js, Express, MongoDB, and more</p>
+                            <p style="margin-top: 30px; font-style: italic;">Click to enter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h3>Let's Connect Across the Cosmos</h3>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <p>&copy; 2023 Alex Stellar. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
