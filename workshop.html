@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #37474f;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        header {
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #00695c;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #00796b;
+            margin-bottom: 30px;
+        }
+        
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            padding: 25px 25px 15px;
+            position: relative;
+        }
+        
+        .card-header.farm {
+            background: linear-gradient(to right, #4caf50, #81c784);
+        }
+        
+        .card-header.readify {
+            background: linear-gradient(to right, #5c6bc0, #7986cb);
+        }
+        
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon-container.farm {
+            color: #4caf50;
+        }
+        
+        .icon-container.readify {
+            color: #5c6bc0;
+        }
+        
+        .icon {
+            font-size: 40px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .description {
+            color: #546e7a;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .features {
+            text-align: left;
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        .features li {
+            margin-bottom: 10px;
+            color: #455a64;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+        
+        .btn.farm {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .btn.farm:hover {
+            background: #388e3c;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .btn.readify {
+            background: #5c6bc0;
+            color: white;
+        }
+        
+        .btn.readify:hover {
+            background: #3f51b5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(92, 107, 192, 0.4);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #00796b;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-card {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+        
+        .bubble-1 {
+            width: 80px;
+            height: 80px;
+            top: -20px;
+            left: -20px;
+        }
+        
+        .bubble-2 {
+            width: 40px;
+            height: 40px;
+            bottom: -10px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Portfolio Projects</h1>
+            <p class="subtitle">Explore the applications I've designed and developed</p>
+        </header>
+        
+        <div class="projects">
+            <div class="project-card">
+                <div class="card-header farm">
+                    <div class="bubble bubble-1"></div>
+                    <div class="bubble bubble-2"></div>
+                    <div class="icon-container farm">
+                        <i class="fas fa-seedling icon"></i>
+                    </div>
+                    <h2>Farm Insights</h2>
+                </div>
+                <div class="card-body">
+                    <p class="description">
+                        A data-driven farming website that provides insights about water usage, crops, and analytics based on your province. 
+                        Make informed decisions for your agricultural needs with visualized data.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check-circle" style="color: #4caf50;"></i> Province-specific agricultural analytics</li>
+                        <li><i class="fas fa-check-circle" style="color: #4caf50;"></i> Water usage recommendations</li>
+                        <li><i class="fas fa-check-circle" style="color: #4caf50;"></i> Crop optimization insights</li>
+                        <li><i class="fas fa-check-circle" style="color: #4caf50;"></i> Data visualization tools</li>
+                    </ul>
+                    <a href="https://agricultural-connect-sa.vercel.app/" class="btn farm">Explore Farm Insights</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="card-header readify">
+                    <div class="bubble bubble-1"></div>
+                    <div class="bubble bubble-2"></div>
+                    <div class="icon-container readify">
+                        <i class="fas fa-book-open icon"></i>
+                    </div>
+                    <h2>Readify</h2>
+                </div>
+                <div class="card-body">
+                    <p class="description">
+                        A personal reading tracker that focuses on capturing the vibe and mood of books. 
+                        Go beyond traditional ratings with colors, emotions, and journal-like notes for your reading journey.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check-circle" style="color: #5c6bc0;"></i> Visual book mood tracking</li>
+                        <li><i class="fas fa-check-circle" style="color: #5c6bc0;"></i> Google Books API integration</li>
+                        <li><i class="fas fa-check-circle" style="color: #5c6bc0;"></i> Personal reading journal</li>
+                        <li><i class="fas fa-check-circle" style="color: #5c6bc0;"></i> Beautiful book cover grid</li>
+                    </ul>
+                    <a href="https://books-app-nu.vercel.app/" class="btn readify">Discover Readify</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Made with <i class="fas fa-heart" style="color: #e91e63;"></i> for my portfolio</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple bubble animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const bubbles = document.querySelectorAll('.bubble');
+            
+            bubbles.forEach(bubble => {
+                const randomX = (Math.random() - 0.5) * 20;
+                const randomY = (Math.random() - 0.5) * 20;
+                
+                bubble.animate([
+                    { transform: 'translate(0, 0)' },
+                    { transform: `translate(${randomX}px, ${randomY}px)` }
+                ], {
+                    duration: 3000,
+                    iterations: Infinity,
+                    direction: 'alternate',
+                    easing: 'ease-in-out'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

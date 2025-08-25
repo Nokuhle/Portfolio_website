@@ -6,6 +6,53 @@
     <title>Nokuhle Ngubane</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for CV download button */
+        .cv-download {
+            display: inline-block;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cv-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+        }
+        
+        .cv-download i {
+            margin-right: 8px;
+        }
+        
+        /* CV button in navigation */
+        .nav-cv {
+            margin-left: 20px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-cv {
+                margin: 10px 0 0 0;
+                order: 3;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Space Canvas for particles -->
@@ -28,6 +75,9 @@
                 <a href="#work">My Work</a>
                 <a href="#contact">Contact</a>
             </div>
+            <a href="Software Development Resume of Nokuhle Ngubane.pdf" class="cv-download nav-cv" download>
+                <i class="fas fa-download"></i> Download CV
+            </a>
             <button class="theme-switch" id="themeSwitch">
                 <div class="theme-switch-handle" id="themeHandle"></div>
             </button>
@@ -70,17 +120,17 @@
             <h2 class="section-title fade-in">About Me</h2>
             <div class="summary-content">
                 <div class="fade-in delay-1">
-                    <p>I'm a passionate frontend developer with expertise in creating beautiful, functional digital experiences. With over 5 years in the industry, I specialize in JavaScript-based applications and responsive design.</p>
-                    <p>My approach combines technical excellence with aesthetic design sensibilities, resulting in applications that are both powerful and delightful to use.</p>
+                    <p>I'm a dedicated and skilled software developer with expertise in full-stack development, software testing, and UI/UX design. I thrive on solving complex challenges and adapting to new technologies, with a strong passion for building user-centric solutions that drive efficiency and innovation.</p>
+                    <p>With hands-on experience in both frontend and backend development, I combine technical problem-solving with creativity and integrity, always striving for continuous learning and improvement.</p>
                 </div>
                 <div class="fade-in delay-2">
-                    <p>I offer end-to-end development services including:</p>
+                    <p>My areas of expertise include:</p>
                     <ul style="list-style-position: inside; margin-top: 20px;">
-                        <li>Custom Web Application Development</li>
+                        <li>Full-Stack Web & Mobile Application Development</li>
                         <li>UI/UX Design & Prototyping</li>
-                        <li>Mobile App Development</li>
-                        <li>API Design & Implementation</li>
-                        <li>Performance Optimization</li>
+                        <li>Software Testing & Quality Assurance</li>
+                        <li>Database Design & Implementation</li>
+                        <li>Agile Development & CI/CD Practices</li>
                     </ul>
                 </div>
             </div>
@@ -93,22 +143,22 @@
                 <div class="achievement-icon">
                     <i class="fas fa-trophy"></i>
                 </div>
-                <h3 class="achievement-title">4-Time Hackathon Winner</h3>
-                <p>Won multiple national hackathons with innovative project ideas and flawless execution.</p>
+                <h3 class="achievement-title">Hackathon Winner</h3>
+                <p>Winner of the Gauteng Campus Innov8 2023 Hackathon for developing an application that streamlined government census data storage.</p>
             </div>
             <div class="achievement-card fade-in delay-1">
                 <div class="achievement-icon">
                     <i class="fas fa-users"></i>
                 </div>
-                <h3 class="achievement-title">Mentor</h3>
-                <p>Regularly mentor junior developers and conduct coding workshops at local communities.</p>
+                <h3 class="achiement-title">Mentor & Tutor</h3>
+                <p>Served as a mentor for the Minecraft Kasi Challenge 2024, guiding students in building a sustainable smart city. Also tutored university students in multiple programming languages and frameworks.</p>
             </div>
             <div class="achievement-card fade-in delay-2">
                 <div class="achievement-icon">
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-lightbulb"></i>
                 </div>
-                <h3 class="achievement-title">Top Rated Freelancer</h3>
-                <p>Maintained a 5-star rating across multiple freelance platforms with 100+ completed projects.</p>
+                <h3 class="achievement-title">Innovative Project Developer</h3>
+                <p>Developed a construction app that integrates machine learning to track site progress and verify materials, improving efficiency in the construction sector.</p>
             </div>
         </div>
 
@@ -118,6 +168,8 @@
             <p class="fade-in">Select a section to view my projects</p>
             
             <div class="doors-container">
+                <!-- Design Galaxy Door (commented out as in original) -->
+                <!--
                 <div class="door fade-in">
                     <div class="door-inner">
                         <div class="door-front">
@@ -134,23 +186,27 @@
                         </div>
                     </div>
                 </div>
+                -->
                 
-                <div class="door fade-in delay-1">
-                    <div class="door-inner">
-                        <div class="door-front">
-                            <div class="door-icon">
-                                <i class="fas fa-code"></i>
+                <!-- Code Universe Door - Now wrapped in an anchor tag -->
+                <a href="workshop.html" class="door-link">
+                    <div class="door fade-in delay-1">
+                        <div class="door-inner">
+                            <div class="door-front">
+                                <div class="door-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="door-title">Code Universe</h3>
+                                <p class="door-description">Full-stack applications with live demos and code</p>
                             </div>
-                            <h3 class="door-title">Code Universe</h3>
-                            <p class="door-description">Full-stack applications with live demos and code</p>
-                        </div>
-                        <div class="door-back">
-                            <h3 class="door-title">My Tech Stack</h3>
-                            <p class="door-description">React, Node.js, Express, MongoDB, and more</p>
-                            <p style="margin-top: 30px; font-style: italic;">Click to enter</p>
+                            <div class="door-back">
+                                <h3 class="door-title">My Tech Stack</h3>
+                                <p class="door-description">React, Node.js, Express, MongoDB, and more</p>
+                                <p style="margin-top: 30px; font-style: italic;">Click to enter</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
     </div>
@@ -160,12 +216,10 @@
         <div class="container">
             <h3>Let's Connect Across the Cosmos</h3>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                <a href="https://github.com/Nokuhle" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nokuhle-ngubane-33013623a/" class="social-link"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2023 Alex Stellar. All rights reserved.</p>
+            <p>&copy; 2023 Nokuhle Ngubane. All rights reserved.</p>
         </div>
     </footer>
     <script src="js/script.js"></script>

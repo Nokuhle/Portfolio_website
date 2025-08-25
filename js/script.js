@@ -182,7 +182,6 @@
             doors.forEach(door => {
                 door.addEventListener('click', function() {
                     const doorType = this.querySelector('.door-title').textContent;
-                    alert(`Navigating to ${doorType}. In a real implementation, this would take you to the actual page.`);
                 });
             });
         });
