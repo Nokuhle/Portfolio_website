@@ -649,6 +649,84 @@
             background: var(--primary);
             color: white;
         }
+        /* UI/UX Design Showcase Styles - Compact Side by Side */
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.design-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.design-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-dark);
+}
+
+.design-preview {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.design-preview iframe {
+    flex-grow: 1;
+}
+
+.design-info {
+    padding: 0 10px;
+}
+
+.design-title {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.design-description {
+    color: var(--gray);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments for design section */
+@media (max-width: 992px) {
+    .designs-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .design-card {
+        padding: 20px;
+    }
+    
+    .design-preview iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .design-preview iframe {
+        height: 300px;
+    }
+    
+    .design-title {
+        font-size: 1.3rem;
+    }
+}
 
         /* Achievements Section */
         .achievements {
@@ -894,6 +972,84 @@
             .project-links {
                 flex-direction: column;
             }
+            /* UI/UX Design Showcase Styles - Compact Side by Side */
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.design-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.design-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-dark);
+}
+
+.design-preview {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.design-preview iframe {
+    flex-grow: 1;
+}
+
+.design-info {
+    padding: 0 10px;
+}
+
+.design-title {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.design-description {
+    color: var(--gray);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments for design section */
+@media (max-width: 992px) {
+    .designs-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .design-card {
+        padding: 20px;
+    }
+    
+    .design-preview iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .design-preview iframe {
+        height: 300px;
+    }
+    
+    .design-title {
+        font-size: 1.3rem;
+    }
+}
         }
     </style>
 </head>
@@ -907,6 +1063,7 @@
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
+                <a href="#designs">UI/UX Designs</a> 
                 <a href="#projects">Projects</a>
                 <a href="#achievements">Achievements</a>
                 <a href="#contact">Contact</a>
@@ -936,9 +1093,7 @@
                         <h1 class="hero-title">Hi, I'm Nokuhle Ngubane</h1>
                         <p class="hero-subtitle">Full-Stack Developer & UI/UX Designer</p>
                         <p class="hero-description">
-                            I create beautiful, functional digital experiences that solve real-world problems. 
-                            With expertise in both frontend and backend development, I bring ideas to life through 
-                            clean code and intuitive design.
+                            I believe good tech feels like art — thoughtful, intuitive, and made with care. That’s what I create: digital work that’s as intentional as it is impactful.
                         </p>
                         <div class="hero-buttons">
                             <a href="#projects" class="btn btn-primary">
@@ -954,7 +1109,6 @@
                         <div class="profile-container">
                             <div class="profile-frame">
                                 <div class="profile-pic">
-                                    <!-- Replace with actual profile image -->
                                     <img src="./assets/images/picture.jpeg" alt="Nokuhle Ngubane">
                                 </div>
                             </div>
@@ -1056,7 +1210,7 @@
                             </div>
                             
                             <div class="timeline-item">
-                                <div class="timeline-date">02/2024 - 11/2024</div>
+                                <div class="timeline-date">02/2024 - 11/2025</div>
                                 <h4 class="timeline-title">Software Development Tutor</h4>
                                 <p class="timeline-subtitle">University of Johannesburg | Auckland Park, Johannesburg</p>
                                 <p>Provided tutoring in Python, C#, JavaScript, PHP, MySQL, ReactJS, and React Native. Assisted students in solving coding challenges and building practical applications. Tailored lessons to individual learning needs, improving student comprehension.</p>
@@ -1100,6 +1254,83 @@
             </div>
         </section>
 
+    <!-- UI/UX Design Showcase Section -->
+<section id="designs">
+    <div class="container">
+        <h2 class="section-title fade-in">UI/UX Design Showcase</h2>
+        <p class="section-description fade-in" style="text-align: center; margin-bottom: 50px;">
+            A collection of my UI/UX design projects
+        </p>
+        
+        <div class="designs-grid">
+            <!-- Design Project 1 -->
+            <div class="design-card fade-in">
+                <div class="design-preview">
+                    <iframe 
+                        style="border: none; border-radius: 12px;" 
+                        width="100%" 
+                        height="400" 
+                        src="https://embed.figma.com/design/Fuc5hlWgg6U1X2Vw0nznYm/Mobile-Application---Portfolio?node-id=0-1&embed-host=share" >
+                    </iframe>
+                </div>
+                <div class="design-info">
+                    <h3 class="design-title">E-Learning Plaform SA</h3>
+                    <p class="design-description">A platform bridging the gap between students and the online school market. It shows the future of how online education will be handled especially in high school institutions</p>
+                </div>
+            </div>
+            
+            <!-- Design Project 2 -->
+            <div class="design-card fade-in delay-1">
+                <div class="design-preview">
+                    <iframe 
+                        style="border: none; border-radius: 12px;" 
+                        width="100%" 
+                        height="400" 
+                        src="https://embed.figma.com/design/zAU1uK43mT61gYCvvWWuCZ/FNB-App?node-id=0-1&embed-host=share">
+                    </iframe>
+                </div>
+                <div class="design-info">
+                    <h3 class="design-title">FNB Hackathon</h3>
+                    <p class="design-description">This was a platform designed during the FNB Hackathon that aimed to help SMME's build credit scores and show them loans/grants afforded to them via their credit scores</p>
+                </div>
+            </div>
+            
+            <!-- Design Project 3 -->
+            <div class="design-card fade-in delay-2">
+                <div class="design-preview">
+                    <iframe 
+                        style="border: none; border-radius: 12px;" 
+                        width="100%" 
+                        height="400" 
+                        src="https://embed.figma.com/design/EkDR9ezRnjjEN8BBUU4fAP/Khulisa-Mobile-App?node-id=0-1&embed-host=share">
+                    </iframe>
+                </div>
+                <div class="design-info">
+                    <h3 class="design-title">Khulisa App</h3>
+                    <p class="design-description">A platform aimed at Small farmers which is aimed at being intergrated with IoT for soil management, water management(saving), crop insights and tips.</p>
+                </div>
+            </div>
+            
+            <!-- Design Project 4 -->
+            <div class="design-card fade-in delay-3">
+                <div class="design-preview">
+                    <iframe 
+                        style="border: none; border-radius: 12px;" 
+                        width="100%" 
+                        height="400" 
+                        src="https://embed.figma.com/design/CLqzO8OXeoHgiZQ0rCv1GK/Final-Year-Project?node-id=0-1&embed-host=share">
+                    </iframe>
+                </div>
+                <div class="design-info">
+                    <h3 class="design-title">Construction Progress Tracker</h3>
+                    <p class="design-description">A Platform designed as a construction app that integrates machine learning to track site progress 
+                            and verify materials, improving efficiency in the construction sector.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
@@ -1129,7 +1360,6 @@
                         </div>
                         <div class="project-links">
                             <a href="https://water-monitoring-app.vercel.app/login.html" class="project-link link-primary">Live Demo</a>
-                            <a href="#" class="project-link link-secondary">Details</a>
                         </div>
                     </div>
                 </div>
@@ -1152,7 +1382,6 @@
                         </div>
                         <div class="project-links">
                             <a href="https://agricultural-connect-sa.vercel.app/" class="project-link link-primary">Live Demo</a>
-                            <a href="#" class="project-link link-secondary">Details</a>
                         </div>
                     </div>
                 </div>
@@ -1175,7 +1404,6 @@
                         </div>
                         <div class="project-links">
                             <a href="https://books-app-nu.vercel.app/" class="project-link link-primary">Live Demo</a>
-                            <a href="#" class="project-link link-secondary">Details</a>
                         </div>
                     </div>
                 </div>
@@ -1197,8 +1425,6 @@
                             <span class="tech-tag">Full-Stack</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link link-primary">Case Study</a>
-                            <a href="#" class="project-link link-secondary">Details</a>
                         </div>
                     </div>
                 </div>
@@ -1215,16 +1441,16 @@
                         <div class="achievement-icon">
                             <i class="fas fa-award"></i>
                         </div>
-                        <h3 class="achievement-title">Top Academic Performer</h3>
-                        <p>Achieved top academic performance in the Diploma in Business Information Technology program at the University of Johannesburg.</p>
+                        <h3 class="achievement-title">Good academic Average</h3>
+                        <p>Achieved good academic performance in the Diploma and Advanced Diploma in Business Information Technology Consistently having a average of 75% and above.</p>
                     </div>
                     
                     <div class="achievement-card fade-in delay-1">
                         <div class="achievement-icon">
                             <i class="fas fa-certificate"></i>
                         </div>
-                        <h3 class="achievement-title">Software Testing Certification</h3>
-                        <p>Completed comprehensive software testing training at Nedbank, gaining practical experience in quality assurance methodologies.</p>
+                        <h3 class="achievement-title">Software Testing Experience</h3>
+                        <p>Completed comprehensive software testing training at Nedbank, gaining practical experience in quality assurance methodologies, Also helping in producing high quality software applications</p>
                     </div>
                     
                     <div class="achievement-card fade-in delay-2">
@@ -1233,6 +1459,14 @@
                         </div>
                         <h3 class="achievement-title">Full-Stack Development</h3>
                         <p>Developed multiple full-stack applications using modern technologies including React, Node.js, and various databases.</p>
+                    </div>
+
+                    <div class="achievement-card fade-in delay-1">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="achievement-title">Multi-Hackathon winner</h3>
+                        <p>Participated and Won multiple hackathons from 1st year up till 3rd year</p>
                     </div>
                 </div>
             </div>
@@ -1248,21 +1482,21 @@
                     </p>
                     
                     <div class="social-links fade-in delay-1">
-                        <a href="https://github.com/NokuhleNgubane" class="social-link">
+                        <a href="https://github.com/Nokuhle" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/nokuhle-ngubane-4b4b6a2a4/" class="social-link">
+                        <a href="https://www.linkedin.com/in/nokuhle-ngubane-33013623a/" class="social-link">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="mailto:nokuhlengubane04@gmail.com" class="social-link">
+                        <a href="mailto:ngubanenokuhle@gmail.com" class="social-link">
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://wa.me/27679591964" class="social-link">
+                        <a href="https://wa.me/7223278636" class="social-link">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                     
-                    <a href="mailto:nokuhlengubane04@gmail.com" class="email-link fade-in delay-2">nokuhlengubane04@gmail.com</a>
+                    <a href="mailto:nokuhlengubane04@gmail.com" class="email-link fade-in delay-2">ngubanenokuhle@gmail.com</a>
                 </div>
             </div>
         </section>
