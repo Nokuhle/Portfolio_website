@@ -1270,7 +1270,7 @@
                         style="border: none; border-radius: 12px;" 
                         width="100%" 
                         height="400" 
-                        src="https://embed.figma.com/design/Fuc5hlWgg6U1X2Vw0nznYm/Mobile-Application---Portfolio?node-id=0-1&embed-host=share" >
+                        data-src="https://embed.figma.com/design/Fuc5hlWgg6U1X2Vw0nznYm/Mobile-Application---Portfolio?node-id=0-1&embed-host=share" >
                     </iframe>
                 </div>
                 <div class="design-info">
@@ -1286,7 +1286,7 @@
                         style="border: none; border-radius: 12px;" 
                         width="100%" 
                         height="400" 
-                        src="https://embed.figma.com/design/zAU1uK43mT61gYCvvWWuCZ/FNB-App?node-id=0-1&embed-host=share">
+                        data-src="https://embed.figma.com/design/zAU1uK43mT61gYCvvWWuCZ/FNB-App?node-id=0-1&embed-host=share">
                     </iframe>
                 </div>
                 <div class="design-info">
@@ -1302,7 +1302,7 @@
                         style="border: none; border-radius: 12px;" 
                         width="100%" 
                         height="400" 
-                        src="https://embed.figma.com/design/EkDR9ezRnjjEN8BBUU4fAP/Khulisa-Mobile-App?node-id=0-1&embed-host=share">
+                        data-src="https://embed.figma.com/design/EkDR9ezRnjjEN8BBUU4fAP/Khulisa-Mobile-App?node-id=0-1&embed-host=share">
                     </iframe>
                 </div>
                 <div class="design-info">
@@ -1318,7 +1318,7 @@
                         style="border: none; border-radius: 12px;" 
                         width="100%" 
                         height="400" 
-                        src="https://embed.figma.com/design/CLqzO8OXeoHgiZQ0rCv1GK/Final-Year-Project?node-id=0-1&embed-host=share">
+                        data-src="https://embed.figma.com/design/CLqzO8OXeoHgiZQ0rCv1GK/Final-Year-Project?node-id=0-1&embed-host=share">
                     </iframe>
                 </div>
                 <div class="design-info">
@@ -1575,6 +1575,23 @@
         window.addEventListener('scroll', fadeInOnScroll);
         // Initial check in case elements are already in view
         fadeInOnScroll();
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const iframes = document.querySelectorAll("iframe[data-src]");
+        
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                iframe.src = iframe.dataset.src;
+                observer.unobserve(iframe);
+            }
+            });
+        });
+
+        iframes.forEach(iframe => observer.observe(iframe));
+        });
+
     </script>
 </body>
 </html>
